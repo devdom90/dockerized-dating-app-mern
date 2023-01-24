@@ -1,5 +1,8 @@
 const router = require("express").Router();
-const { MongoClient } = require("mondoDB");
+const { MongoClient } = require("mondodb");
+require("dotenv").config();
+
+const uri = process.env.MONGO_URI
 
 router.post("/", async (req, res) => {
   const client = new MongoClient(uri);

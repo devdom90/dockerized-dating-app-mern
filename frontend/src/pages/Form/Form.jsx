@@ -26,7 +26,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8000/user", {
+      const response = await axios.put("http://localhost:8000/update-user", {
         formData,
       });
       console.log(response);

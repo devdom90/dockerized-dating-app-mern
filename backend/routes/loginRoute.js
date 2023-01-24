@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const { MongoClient } = require("mongodb");
+require("dotenv").config();
+
+const uri = process.env.MONGO_URI
 
 router.post("/", async (req, res) => {
   const client = new MongoClient(uri);
@@ -28,6 +32,7 @@ router.post("/", async (req, res) => {
     res.status(400).json("Invalid Credentials");
   } catch (err) {
     console.log(err);
+    res.status(500).json("internal Server Error")
   } finally {
     await client.close();
   }

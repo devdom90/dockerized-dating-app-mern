@@ -16,7 +16,7 @@ const Main = () => {
 
     const getUser = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/user', {
+            const response = await axios.get('http://localhost:8000/user/get-user', {
                 params: {userId}
             })
             setUser(response.data)
@@ -26,7 +26,7 @@ const Main = () => {
     }
     const getGenderedUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/gendered-users', {
+            const response = await axios.get('http://localhost:8000/user/gendered-users', {
                 params: {gender: user?.gender_interest}
             })
             setGenderedUsers(response.data)

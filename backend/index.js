@@ -14,7 +14,7 @@ const addMessageRoute = require("./routes/addMessageRoute");
 
 //App config / Port
 const PORT = 8000;
-const uri = process.env.URI;
+const uri = process.env.MONGO_URI;
 const app = express();
 
 // Middleware

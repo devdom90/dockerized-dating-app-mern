@@ -1,8 +1,9 @@
 const router = require("express").Router();
-const { MongoClient } = require("mondoDB");
+const { MongoClient } = require("mongodb");
+require("dotenv").config();
 
 // Get Users
-router.get("/", async (req, res) => {
+router.get("/get-users", async (req, res) => {
   const client = new MongoClient(uri);
   const userId = req.query.userId;
 
