@@ -1,0 +1,33 @@
+.home--container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ), url('C:/Users/Donny/Desktop/dating-project/client/src/images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+.home--wrapper {
+    margin-top: 30vh;
+}
+
+.home--title {
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+}
+
+.home--login-btn {
+    color: rgb(255,255,255);
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+}
+
+
+.home--login-btn:hover {
+    background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}

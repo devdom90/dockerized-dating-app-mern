@@ -1,0 +1,40 @@
+.main--container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main--swipe {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.main--container .card-container {
+    width: 400px;
+    height: 650px;
+}
+
+.card {
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.main--container .main--swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}

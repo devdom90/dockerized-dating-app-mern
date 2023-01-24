@@ -1,0 +1,75 @@
+.form--container {
+    border-top: solid 1px rgb(213, 213, 213);
+}
+
+.form--form {
+    display: flex;
+    justify-content: center;
+}
+
+.form--wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+.form--wrapper input {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+.form--wrapper label {
+    margin: 10px 0;
+}
+
+.form--input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form--wrapper input::-webkit-outer-spin-button,
+.form--wrapper form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form--input-container input {
+    margin-right: 10px;
+}
+
+.form--input-container label {
+    padding: 10px;
+    border: solid 2px rgb(144, 144, 144);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.form--wrapper input[type=radio] {
+    display: none;
+}
+
+.form--wrapper input[type=number] {
+    width: 10%;
+}
+
+.form--wrapper input[type=radio]:checked + label {
+    border: solid 2px rgb(221, 39, 22);
+}
+
+.form--wrapper input[type=submit]:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.form--wrapper input[type=submit]:active {
+    background-color: rgb(226, 115, 115);
+}
+
+.form--photo-container img {
+    width: 100%
+}

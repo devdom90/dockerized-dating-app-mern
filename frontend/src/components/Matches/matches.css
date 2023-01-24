@@ -1,0 +1,17 @@
+.matches--container {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.matches--image {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.matches--image img {
+    width: 100%;
+}

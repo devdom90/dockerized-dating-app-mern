@@ -1,0 +1,17 @@
+.chat--container {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.chat--image {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.chat--image img {
+    width: 100%;
+}
