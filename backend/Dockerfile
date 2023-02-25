@@ -1,18 +1,10 @@
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine
 
-WORKDIR /app
+WORKDIR /backend
 
 COPY package.json .
 
 RUN npm install
-
-RUN npm run build
-
-#################################################
-
-FROM nginx:ltx as prod-stage
-
-COPY --from=build-stage /app/build usr/nginx/html
 
 EXPOSE 80
 

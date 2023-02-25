@@ -1,13 +1,15 @@
-FROM node:18-alpine
+FROM node:lts-alpine as build-stage
 
-WORKDIR /app
+WORKDIR /frontend
 
 ADD ./package.json ./
 
 RUN npm install
-
 COPY . .
+RUN npm run build
 
-EXPOSE 3000
+FROM nginx:stable-alpine as prod-build
+COPY --from=build-stage /frontend/build /usr/share/nginx/html
+EXPOSE 82
 
-CMD [ "npm", "start" ]
+CMD [ "nginx", "-g", "daemon off;" ]
