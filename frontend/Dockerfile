@@ -1,15 +1,14 @@
-FROM node:lts-alpine as build-stage
+FROM node:14-slim
 
-WORKDIR /frontend
+WORKDIR /usr/src/app
 
-ADD ./package.json ./
+COPY ./package.json ./
+COPY ./package-lock.json ./
 
 RUN npm install
+
 COPY . .
-RUN npm run build
 
-FROM nginx:stable-alpine as prod-build
-COPY --from=build-stage /frontend/build /usr/share/nginx/html
-EXPOSE 82
+EXPOSE 3000
 
-CMD [ "nginx", "-g", "daemon off;" ]
+CMD [ "npm", "start" ]

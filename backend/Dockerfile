@@ -1,11 +1,14 @@
-FROM node:lts-alpine
+FROM node:lts-slim
 
-WORKDIR /backend
+WORKDIR /usr/src/app
 
-COPY package.json .
+COPY ./package.json ./
+COPY ./package-lock.json ./
 
 RUN npm install
 
-EXPOSE 80
+COPY . .
 
-CMD [ "npm", "start" ]
+EXPOSE 5000
+
+CMD [ "index.js" ]
