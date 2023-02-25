@@ -12,7 +12,7 @@ services:
     ports:
       - "5000:5000"
     networks:
-      - mern-app
+      - db-app
     depends_on:
       - mongo
   mongo:
@@ -20,12 +20,12 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - mern-app
+      - db-app
     volumes:
       - mongo-data:/data/db
 networks:
-  mern-app:
+  db-app:
     driver: bridge
 volumes:
-  mongo-data:
+  db-data:
     driver: local
