@@ -6,7 +6,7 @@ const uri = process.env.MONGO_URI
 
 router.get("/", async (req, res) => {
   const { userId, correspondingUserId } = req.query;
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI);
 
   try {
     await client.connect();

@@ -4,7 +4,7 @@ require("dotenv").config();
 const uri = process.env.MONGO_URI
 
 router.put("/", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI);
   const { userId, matchedUserId } = req.body;
 
   try {

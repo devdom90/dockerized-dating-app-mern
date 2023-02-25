@@ -4,7 +4,7 @@ require("dotenv").config();
 
 // Get Users
 router.get("/get-users", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI));
   const userId = req.query.userId;
 
   try {
@@ -22,7 +22,7 @@ router.get("/get-users", async (req, res) => {
 
 // Get Users by Id
 router.get("/users", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI);
   const userIds = JSON.parse(req.query.userIds);
 
   try {
@@ -50,7 +50,7 @@ router.get("/users", async (req, res) => {
 
 // Get Gendered Users Endpoint
 router.get("/gendered-users", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI);
   const gender = req.query.gender;
 
   try {

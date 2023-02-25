@@ -6,7 +6,7 @@ require("dotenv").config();
 const uri = process.env.MONGO_URI
 
 router.post("/", async (req, res) => {
-  const client = new MongoClient(uri);
+  const client = new MongoClient(process.env.MONGO_URI);
   const { email, password } = req.body;
 
   const generatedId = uuidv4();
