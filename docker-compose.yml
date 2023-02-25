@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  react-app:
+  client-app:
     image: client-app
     stdin_open: true
     ports: 
