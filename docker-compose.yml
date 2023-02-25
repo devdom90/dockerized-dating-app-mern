@@ -8,7 +8,7 @@ services:
     networks:
       - mern-app
   api-server:
-    image: api-server
+    image: backend-server
     ports:
       - "5000:5000"
     networks:
@@ -22,7 +22,7 @@ services:
     networks:
       - db-app
     volumes:
-      - mongo-data:/data/db
+      - db-data:/data/db
 networks:
   db-app:
     driver: bridge
